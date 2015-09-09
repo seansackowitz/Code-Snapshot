@@ -113,6 +113,15 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <EmbeddedResource Include="Syntax\CPP.xshd" />
+    <EmbeddedResource Include="Syntax\CSHARP.xshd" />
+    <EmbeddedResource Include="Syntax\CSS.xshd" />
+    <EmbeddedResource Include="Syntax\HTML.xshd" />
+    <EmbeddedResource Include="Syntax\JAVA.xshd" />
+    <EmbeddedResource Include="Syntax\JS.xshd" />
+    <EmbeddedResource Include="Syntax\OTHER.xshd" />
+    <EmbeddedResource Include="Syntax\PHP.xshd" />
+    <EmbeddedResource Include="Syntax\XML.xshd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
