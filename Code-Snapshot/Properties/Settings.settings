@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Undo_Redo_Tree.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="IgnoreHiddenFolders" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="IgnoreHiddenFiles" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FolderExcludes" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bin|obj|properties|packages</Value>
+    </Setting>
+    <Setting Name="FileExcludes" Type="System.String" Scope="User">
+      <Value Profile="(Default)">*.sln</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
