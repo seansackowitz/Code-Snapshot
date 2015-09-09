@@ -2,17 +2,19 @@
 <!-- syntaxdefinition for JavaScript 2.0 by Svante Lidman -->
 <!-- converted to AvalonEdit format by Siegfried Pammer in 2010 -->
 <SyntaxDefinition name="JavaScript" extensions=".js" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
-	<Color name="Digits" foreground="DarkBlue" exampleText="3.14" />
-	<Color name="Comment" foreground="Green" exampleText="// comment" />
-	<Color name="String" foreground="Sienna" exampleText="var text = &quot;Hello, World!&quot;;" />
-	<Color name="Character" foreground="Sienna" exampleText="var char = 'a';" />
-	<Color name="Regex" foreground="Sienna" exampleText="/abc/m" />
-	<Color name="JavaScriptKeyWords" foreground="Blue" exampleText="return myVariable;" />
-	<Color name="JavaScriptIntrinsics" foreground="Blue" exampleText="Math.random()" />
-	<Color name="JavaScriptLiterals" foreground="Blue" exampleText="return false;" />
-	<Color name="JavaScriptGlobalFunctions" foreground="Blue" exampleText="escape(myString);" />
+	<Color name="Digits" foreground="#FFB5CEA8" exampleText="3.14" />
+	<Color name="Comment" foreground="#FF57A64A" exampleText="// comment" />
+	<Color name="String" foreground="#FFD69D85" exampleText="var text = &quot;Hello, World!&quot;;" />
+	<Color name="Character" foreground="#FFD69D85" exampleText="var char = 'a';" />
+	<Color name="Regex" foreground="#FFD69D85" exampleText="/abc/m" />
+  <Color name="MethodCall" foreground="#FF4EC9B0" exampleText="o.ToString();"/>
+	<Color name="JavaScriptKeyWords" foreground="#FF569CD6" exampleText="return myVariable;" />
+	<Color name="JavaScriptIntrinsics" foreground="#FF569CD6" exampleText="Math.random()" />
+	<Color name="JavaScriptLiterals" foreground="#FF569CD6" exampleText="return false;" />
+	<Color name="JavaScriptGlobalFunctions" foreground="#FF569CD6" exampleText="escape(myString);" />
 	<RuleSet ignoreCase="false">
 		<Keywords color="JavaScriptKeyWords">
+      <Word>document</Word>
 			<Word>break</Word>
 			<Word>continue</Word>
 			<Word>delete</Word>
@@ -128,5 +130,10 @@
 			</RuleSet>
 		</Span>
 		<Rule color="Digits">\b0[xX][0-9a-fA-F]+|(\b\d+(\.[0-9]+)?|\.[0-9]+)([eE][+-]?[0-9]+)?</Rule>
+    <Rule color="MethodCall">
+      \b
+      [\d\w_]+  # an identifier
+      (?=\s*\() # followed by (
+    </Rule>
 	</RuleSet>
 </SyntaxDefinition>
