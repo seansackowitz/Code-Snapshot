@@ -170,12 +170,21 @@ namespace Code_Snapshot
 
         private void settings_MouseEnter(object sender, MouseEventArgs e)
         {
-            settingsIcon.Fill = new SolidColorBrush(Color.FromArgb(255, 160, 160, 160));
+            settingsIcon.Fill = new SolidColorBrush(Color.FromArgb(255, 220, 220, 220));
         }
 
         private void settings_MouseLeave(object sender, MouseEventArgs e)
         {
-            settingsIcon.Fill = new SolidColorBrush(Color.FromArgb(255, 118, 118, 118));
+            settingsIcon.Fill = new SolidColorBrush(Color.FromArgb(255, 194, 194, 194));
+        }
+        private void loadProject_MouseEnter(object sender, MouseEventArgs e)
+        {
+            loadfolderButton.Fill = new SolidColorBrush(Color.FromArgb(255, 220, 220, 220));
+        }
+
+        private void loadProject_MouseLeave(object sender, MouseEventArgs e)
+        {
+            loadfolderButton.Fill = new SolidColorBrush(Color.FromArgb(255, 194, 194, 194));
         }
         #endregion
 
@@ -201,6 +210,7 @@ namespace Code_Snapshot
         private void openSettings_Click(object sender, RoutedEventArgs e)
         {
             settingsFlyout.IsOpen = !settingsFlyout.IsOpen;
+            blockingPanel.Visibility = settingsFlyout.IsOpen ? Visibility.Visible : Visibility.Collapsed;
             if (settingsFlyout.IsOpen)
             {
                 txtFolderExcludes.Text = Properties.Settings.Default.FolderExcludes;
@@ -218,6 +228,19 @@ namespace Code_Snapshot
             Properties.Settings.Default.IgnoreHiddenFiles = chkHiddenFiles.IsChecked.Value;
             Properties.Settings.Default.Save();
             settingsFlyout.IsOpen = false;
+        }
+
+        private void blockingPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            settingsFlyout.IsOpen = !settingsFlyout.IsOpen;
+            blockingPanel.Visibility = settingsFlyout.IsOpen ? Visibility.Visible : Visibility.Collapsed;
+            if (settingsFlyout.IsOpen)
+            {
+                txtFolderExcludes.Text = Properties.Settings.Default.FolderExcludes;
+                txtFileExcludes.Text = Properties.Settings.Default.FileExcludes;
+                chkHiddenFolders.IsChecked = Properties.Settings.Default.IgnoreHiddenFolders;
+                chkHiddenFiles.IsChecked = Properties.Settings.Default.IgnoreHiddenFiles;
+            }
         }
 
         private void deleteFromTreeView_Click(object sender, RoutedEventArgs e)
