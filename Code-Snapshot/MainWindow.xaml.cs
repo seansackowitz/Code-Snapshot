@@ -62,6 +62,29 @@ namespace Code_Snapshot
             }
         }
 
+        private void loadFile_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.WindowsAPICodePack.Dialogs.CommonOpenFileDialog dlg = new Microsoft.WindowsAPICodePack.Dialogs.CommonOpenFileDialog();
+            dlg.Title = "Select File";
+            dlg.IsFolderPicker = false;
+
+            dlg.AddToMostRecentlyUsedList = false;
+            dlg.AllowNonFileSystemItems = false;
+            dlg.EnsureFileExists = true;
+            dlg.EnsurePathExists = true;
+            dlg.EnsureReadOnly = false;
+            dlg.EnsureValidNames = true;
+            dlg.Multiselect = false;
+            dlg.ShowPlacesList = true;
+
+            if (dlg.ShowDialog() == Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialogResult.Ok)
+            {
+                treeView.ItemsSource = null;
+                Project.LoadFile(dlg.FileName);
+                treeView.ItemsSource = Project.Tracked;
+            }
+        }
+
         private void treeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             if (treeView.SelectedItem != null)
@@ -186,6 +209,16 @@ namespace Code_Snapshot
         {
             loadfolderButton.Fill = new SolidColorBrush(Color.FromArgb(255, 194, 194, 194));
         }
+
+        private void loadFile_MouseEnter(object sender, MouseEventArgs e)
+        {
+            loadfolderButton.Fill = new SolidColorBrush(Color.FromArgb(255, 220, 220, 220));
+        }
+
+        private void loadFile_MouseLeave(object sender, MouseEventArgs e)
+        {
+            loadfolderButton.Fill = new SolidColorBrush(Color.FromArgb(255, 194, 194, 194));
+        }
         #endregion
 
         private void fileName_KeyUp(object sender, KeyEventArgs e)
@@ -228,19 +261,13 @@ namespace Code_Snapshot
             Properties.Settings.Default.IgnoreHiddenFiles = chkHiddenFiles.IsChecked.Value;
             Properties.Settings.Default.Save();
             settingsFlyout.IsOpen = false;
+            blockingPanel.Visibility = Visibility.Collapsed;
         }
 
         private void blockingPanel_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            settingsFlyout.IsOpen = !settingsFlyout.IsOpen;
-            blockingPanel.Visibility = settingsFlyout.IsOpen ? Visibility.Visible : Visibility.Collapsed;
-            if (settingsFlyout.IsOpen)
-            {
-                txtFolderExcludes.Text = Properties.Settings.Default.FolderExcludes;
-                txtFileExcludes.Text = Properties.Settings.Default.FileExcludes;
-                chkHiddenFolders.IsChecked = Properties.Settings.Default.IgnoreHiddenFolders;
-                chkHiddenFiles.IsChecked = Properties.Settings.Default.IgnoreHiddenFiles;
-            }
+            settingsFlyout.IsOpen = false;
+            blockingPanel.Visibility = Visibility.Collapsed;
         }
 
         private void deleteFromTreeView_Click(object sender, RoutedEventArgs e)

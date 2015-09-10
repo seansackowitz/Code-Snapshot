@@ -10,5 +10,10 @@ namespace Code_Snapshot
         {
             Tracked.Add(new SnapshotFolder(Location, null));
         }
+
+        public static void LoadFile(string Location)
+        {
+            Tracked.Add(new SnapshotFile(Location, null));
+        }
     }
 }
