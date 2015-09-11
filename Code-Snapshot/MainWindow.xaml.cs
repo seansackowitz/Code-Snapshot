@@ -257,7 +257,7 @@ namespace Code_Snapshot
         {
             if (CurrentHighlighting != currentFile.Type || !SyntaxInit)
             {
-                string fileName = ".Syntax.";
+                string fileName = "Syntax\\";
                 switch (currentFile.Type)
                 {
                     case FileType.CPP:
@@ -288,14 +288,12 @@ namespace Code_Snapshot
                         fileName += "OTHER.xshd";
                         break;
                 }
-                using (Stream s = typeof(MainWindow).Assembly.GetManifestResourceStream(typeof(MainWindow).Namespace + fileName))
+                
+                using (XmlTextReader reader = new XmlTextReader(AppDomain.CurrentDomain.BaseDirectory + fileName))
                 {
-                    using (XmlTextReader reader = new XmlTextReader(s))
-                    {
-                        fileText.SyntaxHighlighting = null;
-                        if (currentFile.Type != FileType.Other)
-                        fileText.SyntaxHighlighting = HighlightingLoader.Load(reader, HighlightingManager.Instance);
-                    }
+                    fileText.SyntaxHighlighting = null;
+                    if (currentFile.Type != FileType.Other)
+                    fileText.SyntaxHighlighting = HighlightingLoader.Load(reader, HighlightingManager.Instance);
                 }
                 SyntaxInit = true;
             }
