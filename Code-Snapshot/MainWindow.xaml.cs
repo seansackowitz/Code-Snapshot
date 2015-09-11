@@ -154,7 +154,7 @@ namespace Code_Snapshot
                 comboBox.ItemsSource = null;
                 comboBox.ItemsSource = currentFile.Snapshots;
                 if (comboBox.Items.Count > 0)
-                    Select((Snapshot)comboBox.Items[0]);
+                    Select((Snapshot)comboBox.Items[comboBox.Items.Count - 1]);
                 else
                     DeSelect();
             }
