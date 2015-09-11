@@ -163,22 +163,22 @@ namespace Code_Snapshot
         #region GUI Events
         private void button_MouseEnter(object sender, MouseEventArgs e)
         {
-            ((System.Windows.Shapes.Path)((Button)e.Source).Content).Fill = new SolidColorBrush(Color.FromArgb(255, 160, 160, 160));
+            ((Button)e.Source).Foreground = (SolidColorBrush)this.FindResource("toolBarButtonMouseHover");
         }
 
         private void button_MouseLeave(object sender, MouseEventArgs e)
         {
-            ((System.Windows.Shapes.Path)((Button)e.Source).Content).Fill = new SolidColorBrush(Color.FromArgb(255, 118, 118, 118));
+            ((Button)e.Source).Foreground = (SolidColorBrush)this.FindResource("toolBarButtonMouseLeave");
         }
 
         private void titleBarButton_MouseEnter(object sender, MouseEventArgs e)
         {
-            ((System.Windows.Shapes.Path)((Button)e.Source).Content).Fill = new SolidColorBrush(Color.FromArgb(255, 220, 220, 220));
+            ((Button)e.Source).Foreground = (SolidColorBrush)this.FindResource("titleBarButtonMouseHover");
         }
 
         private void titleBarButton_MouseLeave(object sender, MouseEventArgs e)
         {
-            ((System.Windows.Shapes.Path)((Button)e.Source).Content).Fill = new SolidColorBrush(Color.FromArgb(255, 194, 194, 194));
+            ((Button)e.Source).Foreground = (SolidColorBrush)this.FindResource("titleBarButtonMouseLeave");
         }
         #endregion
 
