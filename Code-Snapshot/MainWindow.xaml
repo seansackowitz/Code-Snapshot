@@ -7,23 +7,30 @@
         xmlns:local="clr-namespace:Code_Snapshot"
         mc:Ignorable="d"
         Title="Code Snapshot" Height="720" Width="1280" TitleCaps="False" Background="#FF252526" Loaded="MetroWindow_Loaded">
+    <!--Begin Load Folder and Load File Buttons-->
     <Controls:MetroWindow.LeftWindowCommands>
         <Controls:WindowCommands>
-            <Button Name="loadProject" Click="loadProject_Click" MouseEnter="loadProject_MouseEnter" MouseLeave="loadProject_MouseLeave">
-                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="loadfolderButton" Fill="#FFC2C2C2" Data="m 19.975271 6.4237293 -4.399 0 0 4.3989997 -2 0 0 -4.3989997 -4.3989997 0 0 -2 4.3989997 0 0 -4.39900001 2 0 0 4.39900001 4.399 0 z M 9.884471 3.9119237 C 9.4997766 3.7833031 8.8965325 3.5287147 8.659 3.293 L 8.063 2.705 C 7.671 2.316 6.896 2 6.342 2 L 3.087 2 C 2.532 2 2.028 2.447 1.967 2.994 L 1.675 6 8.5991376 5.9700378 8.6061318 3.9026494 M 19.412 7 l -3.2624 0 0 4.284588 -3.086102 0 L 13.048517 7 0.588 7 C 0.246 7 -0.022 7.294 0.011 7.635 l 0.923 9.669 C 0.971 17.698 1.303 18 1.7 18 l 16.6 0 c 0.397 0 0.728 -0.302 0.766 -0.696 L 19.989 7.635 C 20.022 7.294 19.754 7 19.412 7 Z" Stretch="Fill" Height="24" Width="27"/>
+            <Button Name="loadProject" Click="loadProject_Click" MouseEnter="titleBarButton_MouseEnter" MouseLeave="titleBarButton_MouseLeave">
+                <Path Name="loadfolderButton" Fill="#FFC2C2C2" Data="m 19.975271 6.4237293 -4.399 0 0 4.3989997 -2 0 0 -4.3989997 -4.3989997 0 0 -2 4.3989997 0 0 -4.39900001 2 0 0 4.39900001 4.399 0 z M 9.884471 3.9119237 C 9.4997766 3.7833031 8.8965325 3.5287147 8.659 3.293 L 8.063 2.705 C 7.671 2.316 6.896 2 6.342 2 L 3.087 2 C 2.532 2 2.028 2.447 1.967 2.994 L 1.675 6 8.5991376 5.9700378 8.6061318 3.9026494 M 19.412 7 l -3.2624 0 0 4.284588 -3.086102 0 L 13.048517 7 0.588 7 C 0.246 7 -0.022 7.294 0.011 7.635 l 0.923 9.669 C 0.971 17.698 1.303 18 1.7 18 l 16.6 0 c 0.397 0 0.728 -0.302 0.766 -0.696 L 19.989 7.635 C 20.022 7.294 19.754 7 19.412 7 Z" Stretch="Fill" Height="24" Width="27"/>
             </Button>
-            <Button Name="loadFile" Click="loadFile_Click" MouseEnter="loadFile_MouseEnter" MouseLeave="loadFile_MouseLeave">
-                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="loadfileButton" Fill="#FFC2C2C2"  Data="m 123.86325 734.51423 c 0.15964 26.70139 0.31927 53.40277 0.47891 80.10416 174.25666 0.12331 348.51332 0.24663 522.76998 0.36994 1e-5 0 2e-5 0 3e-5 0 -0.0461 -26.91806 -0.0922 -53.83611 -0.13835 -80.75417 M 123.5201 544.11895 c 0.15964 26.70139 0.31927 53.40277 0.47891 80.10416 174.25666 0.12331 348.51332 0.24663 522.76998 0.36994 10e-6 0 2e-5 0 3e-5 0 -0.0461 -26.91806 -0.0922 -53.83611 -0.13835 -80.75417 M 123.96078 359.40709 c 0.12489 26.70139 0.24977 53.40277 0.37466 80.10416 10e-6 0 2e-5 0 3e-5 0 136.3253 0.12331 272.65059 0.24663 408.97589 0.36994 10e-6 0 2e-5 0 3e-5 0 -0.0361 -26.91806 -0.0721 -53.83611 -0.10823 -80.75417 m 361.94416 -53.43385 c -69.73998 0 -139.47997 0 -209.21995 0 0 69.73992 0 139.47983 0 209.21975 -3e-5 0 -7e-5 0 -10e-5 0 -31.70712 0 -63.41425 0 -95.12137 0 -2e-5 0 -3e-5 0 -5e-5 0 0 -69.73992 0 -139.47983 0 -209.21975 -2e-5 0 -3e-5 0 -5e-5 0 -69.73991 0 -139.47981 0 -209.21972 0 0 -31.70718 0 -63.41435 0 -95.12153 69.73992 0 139.47985 0 209.21977 0 0 -69.73998 0 -139.479964 0 -209.2199455 3e-5 0 7e-5 0 1e-4 0 31.70714 0 63.41428 0 95.12142 0 0 69.7399815 0 139.4799655 0 209.2199455 69.73998 0 139.47997 0 209.21995 0 0 31.70718 0 63.41435 0 95.12153 z M 576 128 c -192 0 -384 0 -576 0 0 298.66667 0 597.33333 0 896 4.6397909e-5 0 9.2795468e-5 0 1.3919303e-4 0 C 256.00009 1024 512.00005 1024 768 1024 c 0 -234.66667 0 -469.33333 0 -704 -21.29745 0.0532 -42.5949 0.10636 -63.89235 0.15954 -0.0359 213.28006 -0.0718 426.56012 -0.10765 639.84018 0 9e-5 0 1.9e-4 0 2.8e-4 -213.33333 0 -426.66667 0 -640 0 0 -256 0 -512 0 -768 170.65579 0.009 341.31159 0.0187 511.96738 0.0281" Stretch="Fill" Height="24" Width="24"/>
+            <Button Name="loadFile" Click="loadFile_Click" MouseEnter="titleBarButton_MouseEnter" MouseLeave="titleBarButton_MouseLeave">
+                <Path Name="loadfileButton" Fill="#FFC2C2C2"  Data="m 123.86325 734.51423 c 0.15964 26.70139 0.31927 53.40277 0.47891 80.10416 174.25666 0.12331 348.51332 0.24663 522.76998 0.36994 1e-5 0 2e-5 0 3e-5 0 -0.0461 -26.91806 -0.0922 -53.83611 -0.13835 -80.75417 M 123.5201 544.11895 c 0.15964 26.70139 0.31927 53.40277 0.47891 80.10416 174.25666 0.12331 348.51332 0.24663 522.76998 0.36994 10e-6 0 2e-5 0 3e-5 0 -0.0461 -26.91806 -0.0922 -53.83611 -0.13835 -80.75417 M 123.96078 359.40709 c 0.12489 26.70139 0.24977 53.40277 0.37466 80.10416 10e-6 0 2e-5 0 3e-5 0 136.3253 0.12331 272.65059 0.24663 408.97589 0.36994 10e-6 0 2e-5 0 3e-5 0 -0.0361 -26.91806 -0.0721 -53.83611 -0.10823 -80.75417 m 361.94416 -53.43385 c -69.73998 0 -139.47997 0 -209.21995 0 0 69.73992 0 139.47983 0 209.21975 -3e-5 0 -7e-5 0 -10e-5 0 -31.70712 0 -63.41425 0 -95.12137 0 -2e-5 0 -3e-5 0 -5e-5 0 0 -69.73992 0 -139.47983 0 -209.21975 -2e-5 0 -3e-5 0 -5e-5 0 -69.73991 0 -139.47981 0 -209.21972 0 0 -31.70718 0 -63.41435 0 -95.12153 69.73992 0 139.47985 0 209.21977 0 0 -69.73998 0 -139.479964 0 -209.2199455 3e-5 0 7e-5 0 1e-4 0 31.70714 0 63.41428 0 95.12142 0 0 69.7399815 0 139.4799655 0 209.2199455 69.73998 0 139.47997 0 209.21995 0 0 31.70718 0 63.41435 0 95.12153 z M 576 128 c -192 0 -384 0 -576 0 0 298.66667 0 597.33333 0 896 4.6397909e-5 0 9.2795468e-5 0 1.3919303e-4 0 C 256.00009 1024 512.00005 1024 768 1024 c 0 -234.66667 0 -469.33333 0 -704 -21.29745 0.0532 -42.5949 0.10636 -63.89235 0.15954 -0.0359 213.28006 -0.0718 426.56012 -0.10765 639.84018 0 9e-5 0 1.9e-4 0 2.8e-4 -213.33333 0 -426.66667 0 -640 0 0 -256 0 -512 0 -768 170.65579 0.009 341.31159 0.0187 511.96738 0.0281" Stretch="Fill" Height="24" Width="24"/>
             </Button>
         </Controls:WindowCommands>
     </Controls:MetroWindow.LeftWindowCommands>
+    <!--End Load Folder and Load File Buttons-->
+
+    <!--Begin Settings Button-->
     <Controls:MetroWindow.RightWindowCommands>
         <Controls:WindowCommands>
-            <Button Name="settings" Click="openSettings_Click" MouseEnter="settings_MouseEnter" MouseLeave="settings_MouseLeave">
-                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="settingsIcon" Fill="#FFC2C2C2" Data="M44 24.707v-5.5l-6.574-2.738c-0.184-0.516-0.377-1.015-0.613-1.505l2.656-6.606l-3.891-3.889l-6.549 2.696   c-0.498-0.242-1.008-0.445-1.535-0.634L24.707 0h-5.5l-2.718 6.509c-0.548 0.194-1.075 0.397-1.595 0.646L8.357 4.528L4.469 8.416   l2.665 6.478c-0.259 0.532-0.467 1.074-0.667 1.633L0 19.293v5.5l6.472 2.697c0.199 0.559 0.413 1.1 0.67 1.633l-2.615 6.52   l3.888 3.889l6.494-2.676c0.522 0.248 1.054 0.447 1.601 0.635L19.293 44h5.5l2.721-6.543c0.523-0.193 1.039-0.396 1.533-0.633   l6.596 2.643l3.889-3.889l-2.709-6.562c0.232-0.494 0.418-0.994 0.602-1.504L44 24.707z M21.957 31.583   c-5.289 0-9.582-4.292-9.582-9.583s4.293-9.583 9.582-9.583c5.292 0 9.583 4.293 9.583 9.583S27.248 31.583 21.957 31.583z" Stretch="Fill" Height="20" Width="20"/>
+            <Button Name="settings" Click="openSettings_Click" MouseEnter="titleBarButton_MouseEnter" MouseLeave="titleBarButton_MouseLeave">
+                <Path Name="settingsIcon" Fill="#FFC2C2C2" Data="M44 24.707v-5.5l-6.574-2.738c-0.184-0.516-0.377-1.015-0.613-1.505l2.656-6.606l-3.891-3.889l-6.549 2.696   c-0.498-0.242-1.008-0.445-1.535-0.634L24.707 0h-5.5l-2.718 6.509c-0.548 0.194-1.075 0.397-1.595 0.646L8.357 4.528L4.469 8.416   l2.665 6.478c-0.259 0.532-0.467 1.074-0.667 1.633L0 19.293v5.5l6.472 2.697c0.199 0.559 0.413 1.1 0.67 1.633l-2.615 6.52   l3.888 3.889l6.494-2.676c0.522 0.248 1.054 0.447 1.601 0.635L19.293 44h5.5l2.721-6.543c0.523-0.193 1.039-0.396 1.533-0.633   l6.596 2.643l3.889-3.889l-2.709-6.562c0.232-0.494 0.418-0.994 0.602-1.504L44 24.707z M21.957 31.583   c-5.289 0-9.582-4.292-9.582-9.583s4.293-9.583 9.582-9.583c5.292 0 9.583 4.293 9.583 9.583S27.248 31.583 21.957 31.583z" Stretch="Fill" Height="20" Width="20"/>
             </Button>
         </Controls:WindowCommands>
     </Controls:MetroWindow.RightWindowCommands>
+    <!--End Settings Button-->
+
+    <!--Begin Setting Flyout Panel-->
     <Controls:MetroWindow.Flyouts>
         <Controls:FlyoutsControl>
             <Controls:Flyout Name="settingsFlyout" Header="Settings" Position="Right" Width="300" Background="#FF0F0F0F">
@@ -35,50 +42,57 @@
                             </ResourceDictionary.MergedDictionaries>
                         </ResourceDictionary>
                     </StackPanel.Resources>
-                    <TextBlock x:Name="label1" Text="File Excludes:"/>
-                    <TextBox x:Name="txtFileExcludes" Margin="0,0,0,20" />
-                    <TextBlock x:Name="label2" Text="Folder Excludes:"/>
-                    <TextBox x:Name="txtFolderExcludes" Margin="0,0,0,20"/>
-                    <CheckBox x:Name="chkHiddenFolders" Margin="0,0,0,20">Ignore Hidden Folders</CheckBox>
-                    <CheckBox x:Name="chkHiddenFiles" Margin="0,0,0,20">Ignore Hidden Files</CheckBox>
-                    <Button x:Name="settingsAccept" Width="100" Click="settingsAccept_Click">Accept</Button>
+                    <TextBlock Name="label1" Text="File Excludes:"/>
+                    <TextBox Name="txtFileExcludes" Margin="0,0,0,20" />
+                    <TextBlock Name="label2" Text="Folder Excludes:"/>
+                    <TextBox Name="txtFolderExcludes" Margin="0,0,0,20"/>
+                    <CheckBox Name="chkHiddenFolders" Margin="0,0,0,20">Ignore Hidden Folders</CheckBox>
+                    <CheckBox Name="chkHiddenFiles" Margin="0,0,0,20">Ignore Hidden Files</CheckBox>
+                    <Button Name="settingsAccept" Width="100" Click="settingsAccept_Click">Accept</Button>
                 </StackPanel>
             </Controls:Flyout>
         </Controls:FlyoutsControl>
     </Controls:MetroWindow.Flyouts>
+    <!--End Setting Flyout Panel-->
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="79*"/>
             <ColumnDefinition Width="239*"/>
         </Grid.ColumnDefinitions>
-        <TreeView x:Name="treeView" Width="180" Margin="0,50,0,0" HorizontalAlignment="Left" Padding="0" RenderTransformOrigin="0,0" SelectedItemChanged="treeView_SelectedItemChanged" PreviewMouseRightButtonDown="treeView_PreviewMouseRightButtonDown" ContextMenuOpening="treeView_ContextMenuOpening" Background="#FF252526"/>
+        <!--File browser-->
+        <TreeView Name="treeView" Width="180" Margin="0,50,0,0" HorizontalAlignment="Left" Padding="0" RenderTransformOrigin="0,0" SelectedItemChanged="treeView_SelectedItemChanged" PreviewMouseRightButtonDown="treeView_PreviewMouseRightButtonDown" ContextMenuOpening="treeView_ContextMenuOpening" Background="#FF252526"/>
+        
+        <!--Displays the snapshot's saved text-->
         <avalonEdit:TextEditor xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit" Name="fileText" FontFamily="Consolas" FontSize="10pt" ShowLineNumbers="True" SyntaxHighlighting="C#" Margin="180,50,0,0" Foreground="#FFF1F1F1" Grid.ColumnSpan="2" IsReadOnly="True" LineNumbersForeground="#FF2B91AF"/>
-        <TextBox x:Name="fileName" Margin="181,0,250,0" VerticalAlignment="Top" Height="29" Foreground="#FFF1F1F1" FontSize="16" FontWeight="Bold" TextDecorations="{x:Null}" Background="#FF444444" Grid.ColumnSpan="2" KeyUp="fileName_KeyUp" LostFocus="fileName_LostFocus" BorderThickness="0" BorderBrush="#FF252526"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="180" Background="#FF444444"><InlineUIContainer>
-                <Button x:Name="takeSnapshot" Width="50" Height="50" Style="{DynamicResource MetroCircleButtonStyle}" MouseEnter="takeSnapshot_MouseEnter" MouseLeave="takeSnapshot_MouseLeave" Margin="2,0,4,0" Click="takeSnapshot_Click">
-                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="take" Fill="#FF767676" Data="M10 8c-1.657 0-3 1.344-3 3c0 1.656 1.343 3 3 3c1.656 0 3-1.344 3-3C13 9.344 11.656 8 10 8z M18 5h-2.4  c-0.33 0-0.686-0.256-0.789-0.57l-0.621-1.861C14.085 2.256 13.731 2 13.4 2H6.6C6.27 2 5.914 2.256 5.811 2.568L5.189 4.43  C5.085 4.744 4.73 5 4.4 5H2C0.9 5 0 5.9 0 7v9c0 1.1 0.9 2 2 2h16c1.1 0 2-0.9 2-2V7C20 5.9 19.1 5 18 5z M10 16  c-2.762 0-5-2.238-5-5c0-2.762 2.238-5 5-5c2.761 0 5 2.238 5 5C15 13.762 12.761 16 10 16z M17.5 8.2c-0.387 0-0.7-0.314-0.7-0.701  c0-0.385 0.313-0.7 0.7-0.7s0.7 0.314 0.7 0.7C18.2 7.886 17.887 8.2 17.5 8.2z" Width="28" Height="23" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        			<Button.Background>
-        				<ImageBrush/>
-        			</Button.Background>
-        		</Button>
-        	</InlineUIContainer><InlineUIContainer>
-                <Button x:Name="restoreSnapshot" Width="50" Height="50" Style="{DynamicResource MetroCircleButtonStyle}" MouseEnter="restoreSnapshot_MouseEnter" MouseLeave="restoreSnapshot_MouseLeave" Margin="4,0" Click="restoreSnapshot_Click">
-                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="restore" Fill="#FF767676" Data="m 406.85345 666.1575 c 18.62379 -3.20682 30.09016 -6.8397 45.93226 -14.55267 46.20157 -22.49396 78.91808 -64.14345 91.14258 -116.02832 2.705 -11.4809 2.82786 -13.08145 2.8402 -37 0.0116 -22.44097 -0.22334 -26.07479 -2.29493 -35.5 -3.3054 -15.03871 -7.40166 -26.77193 -14.13922 -40.5 -9.67751 -19.71832 -19.31661 -32.79322 -35.93539 -48.74432 -41.30953 -39.64989 -99.78286 -54.83938 -154.90925 -40.24046 -28.24715 7.48059 -53.00923 21.65405 -74.22405 42.48478 -29.02359 28.49813 -46.02643 64.59502 -50.51833 107.25 l -0.60552 5.75 -24.51138 0 c -14.86576 0 -24.3802 0.36986 -24.17804 0.9399 0.4866 1.37207 66.18534 71.0601 66.99227 71.0601 0.37506 0 15.85005 -16.0875 34.38887 -35.75 l 33.70695 -35.75 -26.18615 -0.26672 -26.18614 -0.26672 0.62762 -4.73328 c 5.96528 -44.98776 27.49391 -79.70462 63.48285 -102.37182 52.01391 -32.76032 120.09035 -23.94235 163.3837 21.16315 25.19977 26.25458 37.96064 58.38342 37.92072 95.47539 -0.0177 16.48759 -1.92954 28.65644 -6.77932 43.15132 -14.89852 44.52824 -49.14162 76.69063 -94.32823 88.59654 -10.94448 2.88369 -12.86935 3.08544 -30.18981 3.16426 -14.58646 0.0664 -20.29811 -0.3103 -27 -1.78058 -22.36859 -4.90729 -43.00701 -15.07504 -59.61741 -29.37117 l -7.01288 -6.0358 -11.18485 12.01818 c -6.15167 6.61 -11.18486 12.38692 -11.18486 12.83761 0 1.25506 15.57522 13.99132 24.00794 19.6319 13.28393 8.88552 33.12829 17.91014 47.99206 21.82535 21.75153 5.72949 47.99549 7.0857 68.56774 3.54338 z m 33.95983 -106.10976 2.90175 -3.02878 -28.21714 -28.23017 -28.21714 -28.23018 -1.47391 -38.49105 c -0.81064 -21.17008 -1.77406 -45.80355 -2.14092 -54.74105 l -0.66702 -16.25 -4.71383 0 -4.71382 0 -0.67838 17.25 c -2.44009 62.04799 -3.58631 92.79579 -3.59601 96.46487 l -0.0111 4.21488 33.25 26.97809 c 18.2875 14.83795 33.72831 27.00376 34.31291 27.03513 0.5846 0.0314 2.3687 -1.30592 3.96466 -2.97174 z" Height="29.5" Stretch="Fill" Width="33" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,3,0" />
-        			<Button.Background>
-        				<ImageBrush/>
-        			</Button.Background>
-        		</Button>
-        	</InlineUIContainer><InlineUIContainer>
-        		<Button x:Name="deleteSnapshot" Width="50" Height="50" Style="{DynamicResource MetroCircleButtonStyle}" MouseEnter="deleteSnapshot_MouseEnter" MouseLeave="deleteSnapshot_MouseLeave" Margin="4,0" Click="deleteSnapshot_Click">
-        			<Button.Background>
-        				<ImageBrush/>
-        			</Button.Background>
-                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="delete" Fill="#FF767676" Data="M3.389 7.113L4.49 18.021C4.551 18.482 6.777 19.998 10 20c3.225-0.002 5.451-1.518 5.511-1.979l1.102-10.908  C14.929 8.055 12.412 8.5 10 8.5C7.59 8.5 5.072 8.055 3.389 7.113z M13.168 1.51l-0.859-0.951C11.977 0.086 11.617 0 10.916 0  H9.085c-0.7 0-1.061 0.086-1.392 0.559L6.834 1.51C4.264 1.959 2.4 3.15 2.4 4.029v0.17C2.4 5.746 5.803 7 10 7  c4.198 0 7.601-1.254 7.601-2.801v-0.17C17.601 3.15 15.738 1.959 13.168 1.51z M12.07 4.34L11 3H9L7.932 4.34h-1.7  c0 0 1.862-2.221 2.111-2.522C8.533 1.588 8.727 1.5 8.979 1.5h2.043c0.253 0 0.447 0.088 0.637 0.318  c0.248 0.301 2.111 2.522 2.111 2.522H12.07z" Height="27" Stretch="Fill" Width="23"/>
-        		</Button>
-        	</InlineUIContainer></TextBlock>
-        <ComboBox x:Name="comboBox" Width="249" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Height="50" SelectionChanged="comboBox_SelectionChanged" BorderThickness="0" Background="#FF444444" BorderBrush="#FF252526"/>
-        <TextBlock x:Name="fileLocation" Margin="181,30,350,0" TextWrapping="Wrap" Grid.ColumnSpan="2" Background="#FF444444" Height="20" VerticalAlignment="Top"/>
-        <ComboBox x:Name="fileTypeBox" Grid.Column="1" Margin="0,30,250,0" VerticalAlignment="Top" Height="20" Width="99" BorderThickness="0" Background="#FF444444" MinHeight="20" HorizontalAlignment="Right" SelectionChanged="fileTypeBox_SelectionChanged"/>
-        <Rectangle x:Name="blockingPanel" Fill="#CC232323" Grid.ColumnSpan="2" Margin="0,0,0,0" Visibility="Collapsed" MouseDown="blockingPanel_MouseDown"/>
+        
+        <!--Displays the snapshot's viewing name-->
+        <TextBox Name="fileName" Margin="181,0,250,0" VerticalAlignment="Top" Height="29" Foreground="#FFF1F1F1" FontSize="16" FontWeight="Bold" TextDecorations="{x:Null}" Background="#FF444444" Grid.ColumnSpan="2" KeyUp="fileName_KeyUp" LostFocus="fileName_LostFocus" BorderThickness="0" BorderBrush="#FF252526"/>
+        
+        <!--Begin Snapshot Control Button Grid-->
+        <UniformGrid HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="180" Background="#FF444444" Columns="3">
+            <Button Name="takeSnapshot" Width="50" Height="50" Style="{DynamicResource MetroCircleButtonStyle}" MouseEnter="button_MouseEnter" MouseLeave="button_MouseLeave" Click="takeSnapshot_Click">
+                <Path Name="take" Fill="#FF767676" Data="M10 8c-1.657 0-3 1.344-3 3c0 1.656 1.343 3 3 3c1.656 0 3-1.344 3-3C13 9.344 11.656 8 10 8z M18 5h-2.4  c-0.33 0-0.686-0.256-0.789-0.57l-0.621-1.861C14.085 2.256 13.731 2 13.4 2H6.6C6.27 2 5.914 2.256 5.811 2.568L5.189 4.43  C5.085 4.744 4.73 5 4.4 5H2C0.9 5 0 5.9 0 7v9c0 1.1 0.9 2 2 2h16c1.1 0 2-0.9 2-2V7C20 5.9 19.1 5 18 5z M10 16  c-2.762 0-5-2.238-5-5c0-2.762 2.238-5 5-5c2.761 0 5 2.238 5 5C15 13.762 12.761 16 10 16z M17.5 8.2c-0.387 0-0.7-0.314-0.7-0.701  c0-0.385 0.313-0.7 0.7-0.7s0.7 0.314 0.7 0.7C18.2 7.886 17.887 8.2 17.5 8.2z" Width="28" Height="23" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Name="restoreSnapshot" Width="50" Height="50" Style="{DynamicResource MetroCircleButtonStyle}" MouseEnter="button_MouseEnter" MouseLeave="button_MouseLeave" Click="restoreSnapshot_Click">
+                <Path Name="restore" Fill="#FF767676" Data="m 406.85345 666.1575 c 18.62379 -3.20682 30.09016 -6.8397 45.93226 -14.55267 46.20157 -22.49396 78.91808 -64.14345 91.14258 -116.02832 2.705 -11.4809 2.82786 -13.08145 2.8402 -37 0.0116 -22.44097 -0.22334 -26.07479 -2.29493 -35.5 -3.3054 -15.03871 -7.40166 -26.77193 -14.13922 -40.5 -9.67751 -19.71832 -19.31661 -32.79322 -35.93539 -48.74432 -41.30953 -39.64989 -99.78286 -54.83938 -154.90925 -40.24046 -28.24715 7.48059 -53.00923 21.65405 -74.22405 42.48478 -29.02359 28.49813 -46.02643 64.59502 -50.51833 107.25 l -0.60552 5.75 -24.51138 0 c -14.86576 0 -24.3802 0.36986 -24.17804 0.9399 0.4866 1.37207 66.18534 71.0601 66.99227 71.0601 0.37506 0 15.85005 -16.0875 34.38887 -35.75 l 33.70695 -35.75 -26.18615 -0.26672 -26.18614 -0.26672 0.62762 -4.73328 c 5.96528 -44.98776 27.49391 -79.70462 63.48285 -102.37182 52.01391 -32.76032 120.09035 -23.94235 163.3837 21.16315 25.19977 26.25458 37.96064 58.38342 37.92072 95.47539 -0.0177 16.48759 -1.92954 28.65644 -6.77932 43.15132 -14.89852 44.52824 -49.14162 76.69063 -94.32823 88.59654 -10.94448 2.88369 -12.86935 3.08544 -30.18981 3.16426 -14.58646 0.0664 -20.29811 -0.3103 -27 -1.78058 -22.36859 -4.90729 -43.00701 -15.07504 -59.61741 -29.37117 l -7.01288 -6.0358 -11.18485 12.01818 c -6.15167 6.61 -11.18486 12.38692 -11.18486 12.83761 0 1.25506 15.57522 13.99132 24.00794 19.6319 13.28393 8.88552 33.12829 17.91014 47.99206 21.82535 21.75153 5.72949 47.99549 7.0857 68.56774 3.54338 z m 33.95983 -106.10976 2.90175 -3.02878 -28.21714 -28.23017 -28.21714 -28.23018 -1.47391 -38.49105 c -0.81064 -21.17008 -1.77406 -45.80355 -2.14092 -54.74105 l -0.66702 -16.25 -4.71383 0 -4.71382 0 -0.67838 17.25 c -2.44009 62.04799 -3.58631 92.79579 -3.59601 96.46487 l -0.0111 4.21488 33.25 26.97809 c 18.2875 14.83795 33.72831 27.00376 34.31291 27.03513 0.5846 0.0314 2.3687 -1.30592 3.96466 -2.97174 z" Height="29.5" Stretch="Fill" Width="33" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,3,0" />
+            </Button>
+            <Button Name="deleteSnapshot" Width="50" Height="50" Style="{DynamicResource MetroCircleButtonStyle}" MouseEnter="button_MouseEnter" MouseLeave="button_MouseLeave" Click="deleteSnapshot_Click">
+                <Path Name="delete" Fill="#FF767676" Data="M3.389 7.113L4.49 18.021C4.551 18.482 6.777 19.998 10 20c3.225-0.002 5.451-1.518 5.511-1.979l1.102-10.908  C14.929 8.055 12.412 8.5 10 8.5C7.59 8.5 5.072 8.055 3.389 7.113z M13.168 1.51l-0.859-0.951C11.977 0.086 11.617 0 10.916 0  H9.085c-0.7 0-1.061 0.086-1.392 0.559L6.834 1.51C4.264 1.959 2.4 3.15 2.4 4.029v0.17C2.4 5.746 5.803 7 10 7  c4.198 0 7.601-1.254 7.601-2.801v-0.17C17.601 3.15 15.738 1.959 13.168 1.51z M12.07 4.34L11 3H9L7.932 4.34h-1.7  c0 0 1.862-2.221 2.111-2.522C8.533 1.588 8.727 1.5 8.979 1.5h2.043c0.253 0 0.447 0.088 0.637 0.318  c0.248 0.301 2.111 2.522 2.111 2.522H12.07z" Height="27" Stretch="Fill" Width="23"/>
+            </Button>
+        </UniformGrid>
+        <!--End Snapshot Control Button Grid-->
+        
+        <!--Snapshot Selection Box-->
+        <ComboBox Name="comboBox" Width="249" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Height="50" SelectionChanged="comboBox_SelectionChanged" BorderThickness="0" Background="#FF444444" BorderBrush="#FF252526"/>
+        
+        <!--Displays the file location-->
+        <TextBlock Name="fileLocation" Margin="181,30,350,0" TextWrapping="Wrap" Grid.ColumnSpan="2" Background="#FF444444" Height="20" VerticalAlignment="Top"/>
+        
+        <!--Allows selection of the syntax-->
+        <ComboBox Name="fileTypeBox" Grid.Column="1" Margin="0,30,250,0" VerticalAlignment="Top" Height="20" Width="99" BorderThickness="0" Background="#FF444444" MinHeight="20" HorizontalAlignment="Right" SelectionChanged="fileTypeBox_SelectionChanged"/>
+        
+        <!--Blocks user from clicking on items when settings panel is open. Also closes settings when clicked.-->
+        <Rectangle Name="blockingPanel" Fill="#CC232323" Grid.ColumnSpan="2" Margin="0,0,0,0" Visibility="Collapsed" MouseDown="blockingPanel_MouseDown"/>
     </Grid>
 </Controls:MetroWindow>

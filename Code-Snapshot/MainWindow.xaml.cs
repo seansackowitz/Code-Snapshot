@@ -161,63 +161,24 @@ namespace Code_Snapshot
         }
 
         #region GUI Events
-        private void takeSnapshot_MouseEnter(object sender, MouseEventArgs e)
+        private void button_MouseEnter(object sender, MouseEventArgs e)
         {
-            take.Fill = new SolidColorBrush(Color.FromArgb(255, 160, 160, 160));
+            ((System.Windows.Shapes.Path)((Button)e.Source).Content).Fill = new SolidColorBrush(Color.FromArgb(255, 160, 160, 160));
         }
 
-        private void takeSnapshot_MouseLeave(object sender, MouseEventArgs e)
+        private void button_MouseLeave(object sender, MouseEventArgs e)
         {
-            take.Fill = new SolidColorBrush(Color.FromArgb(255, 118, 118, 118));
+            ((System.Windows.Shapes.Path)((Button)e.Source).Content).Fill = new SolidColorBrush(Color.FromArgb(255, 118, 118, 118));
         }
 
-        private void restoreSnapshot_MouseEnter(object sender, MouseEventArgs e)
+        private void titleBarButton_MouseEnter(object sender, MouseEventArgs e)
         {
-            restore.Fill = new SolidColorBrush(Color.FromArgb(255, 160, 160, 160));
+            ((System.Windows.Shapes.Path)((Button)e.Source).Content).Fill = new SolidColorBrush(Color.FromArgb(255, 220, 220, 220));
         }
 
-        private void restoreSnapshot_MouseLeave(object sender, MouseEventArgs e)
+        private void titleBarButton_MouseLeave(object sender, MouseEventArgs e)
         {
-            restore.Fill = new SolidColorBrush(Color.FromArgb(255, 118, 118, 118));
-        }
-
-        private void deleteSnapshot_MouseEnter(object sender, MouseEventArgs e)
-        {
-            delete.Fill = new SolidColorBrush(Color.FromArgb(255, 160, 160, 160));
-        }
-
-        private void deleteSnapshot_MouseLeave(object sender, MouseEventArgs e)
-        {
-            delete.Fill = new SolidColorBrush(Color.FromArgb(255, 118, 118, 118));
-        }
-
-        private void settings_MouseEnter(object sender, MouseEventArgs e)
-        {
-            settingsIcon.Fill = new SolidColorBrush(Color.FromArgb(255, 220, 220, 220));
-        }
-
-        private void settings_MouseLeave(object sender, MouseEventArgs e)
-        {
-            settingsIcon.Fill = new SolidColorBrush(Color.FromArgb(255, 194, 194, 194));
-        }
-        private void loadProject_MouseEnter(object sender, MouseEventArgs e)
-        {
-            loadfolderButton.Fill = new SolidColorBrush(Color.FromArgb(255, 220, 220, 220));
-        }
-
-        private void loadProject_MouseLeave(object sender, MouseEventArgs e)
-        {
-            loadfolderButton.Fill = new SolidColorBrush(Color.FromArgb(255, 194, 194, 194));
-        }
-
-        private void loadFile_MouseEnter(object sender, MouseEventArgs e)
-        {
-            loadfolderButton.Fill = new SolidColorBrush(Color.FromArgb(255, 220, 220, 220));
-        }
-
-        private void loadFile_MouseLeave(object sender, MouseEventArgs e)
-        {
-            loadfolderButton.Fill = new SolidColorBrush(Color.FromArgb(255, 194, 194, 194));
+            ((System.Windows.Shapes.Path)((Button)e.Source).Content).Fill = new SolidColorBrush(Color.FromArgb(255, 194, 194, 194));
         }
         #endregion
 
