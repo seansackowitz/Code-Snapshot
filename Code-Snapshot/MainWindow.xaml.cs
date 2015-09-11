@@ -9,6 +9,7 @@ using ICSharpCode.AvalonEdit.Highlighting.Xshd;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Code_Snapshot
 {
