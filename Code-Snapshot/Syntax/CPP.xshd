@@ -2,26 +2,26 @@
 <!-- syntaxdefinition for C/C++ 2001 by Andrea Paatz and Mike Krueger -->
 <!-- converted to AvalonEdit format by Siegfried Pammer in 2010 -->
 <SyntaxDefinition name="C++" extensions=".c;.h;.cc;.cpp;.hpp" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
-	<Color name="Comment" foreground="Green" />
-	<Color name="Character" foreground="Fuchsia" />
-	<Color name="String" foreground="Fuchsia" />
-	<Color name="Preprocessor" foreground="Green" />
-	<Color name="Punctuation" foreground="DarkGreen" />
-	<Color name="MethodName" foreground="MidnightBlue" fontWeight="bold" />
-	<Color name="Digits" foreground="DarkBlue" />
-	<Color name="CompoundKeywords" foreground="Black" fontWeight="bold" />
-	<Color name="This" foreground="Black" fontWeight="bold" />
-	<Color name="Operators" foreground="#FF008B8B" fontWeight="bold" />
-	<Color name="Namespace" foreground="#FF008000" fontWeight="bold" />
+	<Color name="Comment" foreground="#FF57A64A" />
+	<Color name="Character" foreground="#FFD69D85" />
+	<Color name="String" foreground="#FFD69D85" />
+	<Color name="Preprocessor" foreground="#FF9B9B9B" />
+	<Color name="Punctuation" foreground="#FFDCDCDC" />
+	<Color name="MethodName" foreground="#FF4EC9B0" />
+	<Color name="Digits" foreground="#FFB5CEA8" />
+	<Color name="CompoundKeywords" foreground="#FF569CD6" />
+	<Color name="This" />
+	<Color name="Operators" foreground="#FF008B8B" />
+	<Color name="Namespace" foreground="#FF008000" />
 	<Color name="Friend" foreground="#FFA52A2A" />
-	<Color name="Modifiers" foreground="#FF0000FF" fontWeight="bold" />
-	<Color name="TypeKeywords" foreground="#FFFF0000" />
-	<Color name="BooleanConstants" foreground="#FF000000" fontWeight="bold" />
-	<Color name="Keywords" foreground="#FF0000FF" fontWeight="bold" />
-	<Color name="LoopKeywords" foreground="#FF0000FF" fontWeight="bold" />
-	<Color name="JumpKeywords" foreground="#FF000080" />
-	<Color name="ExceptionHandling" foreground="#FF008080" fontWeight="bold" />
-	<Color name="ControlFlow" foreground="#FF0000FF" fontWeight="bold" />
+	<Color name="Modifiers" foreground="#FF569CD6" />
+	<Color name="TypeKeywords" foreground="#FF569CD6" />
+	<Color name="BooleanConstants" foreground="#FF569CD6" />
+	<Color name="Keywords" foreground="#FF569CD6" />
+	<Color name="LoopKeywords" foreground="#FF569CD6" />
+	<Color name="JumpKeywords" foreground="#FF569CD6" />
+	<Color name="ExceptionHandling" foreground="#FF569CD6" />
+	<Color name="ControlFlow" foreground="#FF569CD6" />
 	<RuleSet ignoreCase="false">
 		<Rule color="Punctuation">
 		[?,.;()\[\]{}+\-/%*&lt;&gt;^=~!&amp;]+

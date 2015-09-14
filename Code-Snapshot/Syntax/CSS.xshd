@@ -1,12 +1,12 @@
 ﻿<SyntaxDefinition name="CSS" extensions=".css" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
-	<Color name="Comment" foreground="Gray" exampleText="/* comment */" />
-	<Color name="String" foreground="Green" exampleText="body { background: url(&quot;image.png&quot;) }" />
-	<Color name="Selector" foreground="DarkBlue" fontWeight="bold" exampleText="div p" />
-	<Color name="Class" foreground="DarkMagenta" exampleText="#para" />
-	<Color name="Property" foreground="Red" exampleText="p { color: red; }" />
-	<Color name="Value" foreground="Blue" exampleText="p { color: red; }" />
-	<Color name="CurlyBraces" foreground="Black" exampleText="{ }" />
-	<Color name="Colon" foreground="Black" exampleText=":" />
+	<Color name="Comment" foreground="#FF57A64A" />
+	<Color name="String" foreground="#FFD69D85" />
+	<Color name="Selector" foreground="#FFDCDCDC" />
+	<Color name="Class" foreground="#FF4EC9B0" />
+	<Color name="Property" foreground="#FFB5CEA8" />
+	<Color name="Value" foreground="#FF569CD6" />
+	<Color name="CurlyBraces" foreground="#FFDCDCDC" />
+	<Color name="Colon" foreground="#FFDCDCDC" />
 	<RuleSet ignoreCase="true">
 		<Span color="Comment" multiline="true">
 			<Begin>/\*</Begin>
