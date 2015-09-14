@@ -2,20 +2,20 @@
 <!-- syntaxdefinition for PHP 2001 by Chad Smith & Mike Krueger -->
 <!-- converted to AvalonEdit format by Siegfried Pammer in 2010 -->
 <SyntaxDefinition name ="PHP" extensions = ".php" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
-	<Color name="Comment" foreground="Green" exampleText="// comment" />
-	<Color name="String" foreground="Blue" exampleText="$text = &quot;Hello, World!&quot;" />
-	<Color name="NumberLiteral" foreground="DarkBlue" exampleText="3.1415" />
-	<Color name="Punctuation" foreground="DarkGreen" exampleText="a(b + c)" />
-	<Color name="FunctionCall" foreground="MidnightBlue" fontWeight="bold" exampleText="abs(num);"/>
-	<Color name="AccessKeywords" foreground="Black" fontWeight="bold" exampleText="global $database;" />
-	<Color name="OperatorKeywords" foreground="DarkCyan" fontWeight="bold" exampleText="if (x === false and y === false) { }" />
-	<Color name="SelectionStatements" foreground="Blue" fontWeight="bold" exampleText="if (true) { } else { }" />
-	<Color name="IterationStatements" foreground="Blue" fontWeight="bold" exampleText="while (true) { }" />
-	<Color name="JumpStatements" foreground="Navy" fontWeight="bold" exampleText="if (x == 5) continue;" />
-	<Color name="ControlStatements" foreground="Teal" fontWeight="bold" exampleText="include(&quot;test.php&quot;);" />
-	<Color name="ValueTypes" foreground="Red" fontWeight="bold" exampleText="int test = 5;" />
-	<Color name="OtherTypes" foreground="Red" exampleText="object test = null;" />
-	<Color name="AccessModifiers" foreground="Blue" fontWeight="bold" exampleText="public function test() {}" />
+	<Color name="Comment" foreground="#FF57A64A" exampleText="// comment" />
+	<Color name="String" foreground="#FFD69D85" exampleText="$text = &quot;Hello, World!&quot;" />
+	<Color name="NumberLiteral" foreground="#FFB5CEA8" exampleText="3.1415" />
+	<Color name="Punctuation" foreground="#FFDCDCDC" exampleText="a(b + c)" />
+	<Color name="FunctionCall" foreground="#FF4EC9B0" exampleText="abs(num);"/>
+	<Color name="AccessKeywords" foreground="Black" exampleText="global $database;" />
+	<Color name="OperatorKeywords" foreground="#FF569CD6" exampleText="if(x === false and y === false) {}" />
+	<Color name="SelectionStatements" foreground="#FF569CD6" exampleText="if (true) { } else { }" />
+	<Color name="IterationStatements" foreground="#FF569CD6" exampleText="while (true) { }" />
+	<Color name="JumpStatements" foreground="#FF569CD6" exampleText="if (x == 5) continue;" />
+	<Color name="ControlStatements" foreground="#FF569CD6" exampleText="include(&quot;test.php&quot;);" />
+	<Color name="ValueTypes" foreground="#FFDCDCDC" exampleText="int test = 5;" />
+	<Color name="OtherTypes" foreground="#FFDCDCDC" exampleText="object test = null;" />
+	<Color name="AccessModifiers" foreground="#FF569CD6" exampleText="public function test() {}" />
 	<RuleSet>
 		<Span color="Comment">
 			<Begin>\#</Begin>
@@ -46,13 +46,6 @@
 			[?,.:;()\[\]{}+\-/%*&lt;&gt;&amp;^!|~@]+
 		</Rule>
 		
-		<!-- Mark previous rule-->
-		<Rule color="FunctionCall">
-		\b
-		[\d\w_]+  # an identifier
-		(?=\s*\() # followed by (
-		</Rule>
-		
 		<Span color="String" multiline="true">
 			<Begin>'</Begin>
 			<End>'</End>
@@ -69,18 +62,6 @@
 				<!-- span for escape sequences -->
 				<Span begin="\\" end="."/>
 			</RuleSet>
-		</Span>
-		
-		<!-- heredoc syntax -->
-		<Span color="String" multiline="true">
-			<Begin>&lt;&lt;&lt;\"?[\d\w_]+\"?$</Begin>
-		 	<End>^[\d\w_]+;</End>
-		</Span>
-	
-		<!-- nowdoc syntax -->
-		<Span color="String" multiline="true">
-			<Begin>&lt;&lt;&lt;\'[\d\w_]+\'$</Begin>
-			<End>^[\d\w_]+;</End>
 		</Span>
 	
 		<Keywords color="AccessKeywords">
@@ -101,7 +82,7 @@
 		</Keywords>
 	
 		<Keywords color="SelectionStatements">
-			<Word>else</Word>
+			<Word>if</Word>
 			<Word>else</Word>
 			<Word>switch</Word>
 			<Word>case</Word>
@@ -132,6 +113,7 @@
 			<Word>require</Word>
 			<Word>include</Word>
 			<Word>function</Word>
+			<Word>use</Word>
 		</Keywords>
 	
 		<Keywords color="ValueTypes">
@@ -154,5 +136,24 @@
 			<Word>public</Word>
 			<Word>private</Word>
 		</Keywords>
+
+		<!-- Mark previous rule-->
+		<Rule color="FunctionCall">
+		\b
+		[\d\w_]+  # an identifier
+		(?=\s*\() # followed by (
+		</Rule>
+
+		<!-- heredoc syntax -->
+		<Span color="String" multiline="true">
+			<Begin>&lt;&lt;&lt;\"?[\d\w_]+\"?$</Begin>
+		 	<End>^[\d\w_]+;</End>
+		</Span>
+	
+		<!-- nowdoc syntax -->
+		<Span color="String" multiline="true">
+			<Begin>&lt;&lt;&lt;\'[\d\w_]+\'$</Begin>
+			<End>^[\d\w_]+;</End>
+		</Span>
 	</RuleSet>
 </SyntaxDefinition>
