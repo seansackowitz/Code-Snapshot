@@ -38,6 +38,9 @@ namespace Code_Snapshot
             refreshFolderTreeView = new MenuItem();
             refreshFolderTreeView.Header = "Refresh";
             refreshFolderTreeView.Click += refreshFolderTreeView_Click;
+
+            fileText.Options.EnableEmailHyperlinks = false;
+            fileText.Options.EnableHyperlinks = false;
         }
 
         private void loadProject_Click(object sender, RoutedEventArgs e)
