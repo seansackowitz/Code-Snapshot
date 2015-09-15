@@ -14,7 +14,7 @@ namespace Code_Snapshot
         public static void Main(string[] param)
         {
             AppDomain.CurrentDomain.AssemblyResolve += (sender, args) => {
-                string resourceName = "Code_Snapshot.AssemblyLoadingAndReflection." + new AssemblyName(args.Name).Name + ".dll";
+                string resourceName = "Code_Snapshot.AssemblyLoading." + new AssemblyName(args.Name).Name + ".dll";
                 using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
                 {
                     byte[] assemblyData = new byte[stream.Length];

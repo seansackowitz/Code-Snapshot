@@ -169,15 +169,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AssemblyLoadingAndReflection\Microsoft.WindowsAPICodePack.dll" />
+    <EmbeddedResource Include="AssemblyLoading\Microsoft.WindowsAPICodePack.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AssemblyLoadingAndReflection\Microsoft.WindowsAPICodePack.Shell.dll" />
+    <EmbeddedResource Include="AssemblyLoading\Microsoft.WindowsAPICodePack.Shell.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AssemblyLoadingAndReflection\ICSharpCode.AvalonEdit.dll" />
-    <EmbeddedResource Include="AssemblyLoadingAndReflection\MahApps.Metro.dll" />
-    <EmbeddedResource Include="AssemblyLoadingAndReflection\System.Windows.Interactivity.dll" />
+    <EmbeddedResource Include="AssemblyLoading\ICSharpCode.AvalonEdit.dll" />
+    <EmbeddedResource Include="AssemblyLoading\MahApps.Metro.dll" />
+    <EmbeddedResource Include="AssemblyLoading\System.Windows.Interactivity.dll" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
