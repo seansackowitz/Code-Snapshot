@@ -61,7 +61,7 @@ namespace Code_Snapshot.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("*.sln")]
+        [global::System.Configuration.DefaultSettingValueAttribute("*.sln|*.csproj|*.config")]
         public string FileExcludes {
             get {
                 return ((string)(this["FileExcludes"]));

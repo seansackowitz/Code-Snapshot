@@ -61,10 +61,6 @@
       <HintPath>AssemblyLoadingAndReflection\MahApps.Metro.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.WindowsAPICodePack">
-      <HintPath>AssemblyLoadingAndReflection\Microsoft.WindowsAPICodePack.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack.Shell">
       <HintPath>AssemblyLoadingAndReflection\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
       <Private>False</Private>
@@ -169,13 +165,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AssemblyLoading\Microsoft.WindowsAPICodePack.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="AssemblyLoading\Microsoft.WindowsAPICodePack.Shell.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AssemblyLoading\ICSharpCode.AvalonEdit.dll" />
     <EmbeddedResource Include="AssemblyLoading\MahApps.Metro.dll" />
     <EmbeddedResource Include="AssemblyLoading\System.Windows.Interactivity.dll" />
   </ItemGroup>
