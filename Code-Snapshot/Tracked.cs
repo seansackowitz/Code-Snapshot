@@ -14,14 +14,21 @@ namespace Code_Snapshot
         public string ItemName;
         public string Location;
 
-        public override string ToString()
-        {
-            return ItemName;
-        }
-
+        /// <summary>
+        /// Removes the specified Tracked object from the list of items associated with this Tracked object
+        /// </summary>
+        /// <param name="item">The item to remove</param>
         public void Remove(Tracked item)
         {
             Items.Remove(item);
+        }
+
+        /// <summary>
+        /// Used to display the appropriate string in the tree view
+        /// </summary>
+        public override string ToString()
+        {
+            return ItemName;
         }
     }
 }
