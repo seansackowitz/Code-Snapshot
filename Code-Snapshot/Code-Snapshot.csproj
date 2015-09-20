@@ -54,15 +54,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.AvalonEdit">
-      <HintPath>AssemblyLoadingAndReflection\ICSharpCode.AvalonEdit.dll</HintPath>
+      <HintPath>AssemblyLoading\ICSharpCode.AvalonEdit.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MahApps.Metro">
-      <HintPath>AssemblyLoadingAndReflection\MahApps.Metro.dll</HintPath>
+      <HintPath>AssemblyLoading\MahApps.Metro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack.Shell">
-      <HintPath>AssemblyLoadingAndReflection\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+      <HintPath>AssemblyLoading\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -182,6 +182,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AssemblyLoading\ICSharpCode.AvalonEdit.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AssemblyLoading\Microsoft.WindowsAPICodePack.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
