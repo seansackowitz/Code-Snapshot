@@ -41,6 +41,10 @@ namespace Code_Snapshot
 
             fileText.Options.EnableEmailHyperlinks = false;
             fileText.Options.EnableHyperlinks = false;
+
+            loadProject.Foreground = (SolidColorBrush)this.FindResource("titleBarButtonMouseLeave");
+            loadFile.Foreground = (SolidColorBrush)this.FindResource("titleBarButtonMouseLeave");
+            settings.Foreground = (SolidColorBrush)this.FindResource("titleBarButtonMouseLeave");
         }
 
         private void loadProject_Click(object sender, RoutedEventArgs e)
